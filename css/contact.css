@@ -1,0 +1,210 @@
+@font-face{
+    font-family: "Raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face{
+    font-family: "Raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face{
+    font-family: "Raleway-bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face{
+    font-family: "Raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face{
+    font-family: "Raleway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+@font-face{
+    font-family: "Raleway-extrabold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+:root{
+    --primary:#EEBF00;
+    --secondary:#232838;
+    --ternary:#6C6C6C;
+    --danger:#fe4545;
+    --pure:#FEFEFE;
+    --light:#F0f0f0;
+    --heaven:#ffffff;
+    --footer:#2d333f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway-Regular';
+    box-sizing: border-box;
+}
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(
+        rgba(35,43,56,0.5),
+        rgba(35,43,56,0.5)
+    ),url(../images/food-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 600;
+    color:var(--primary);
+    margin-bottom: 1rem;
+}
+.contact .content p{
+    
+    font-weight: 300;
+    color:var(--pure);
+    margin-bottom:1rem ;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contact-info .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contact-info .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: var(--pure);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contact-info .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: var(--pure);
+    flex-direction: column;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+.container .contact-info .box .text h3{
+    font-weight: 800;
+    color: var(--primary);
+}
+.contact-form{
+    width: 40%;
+    padding: 40px;
+    background:var(--heaven);
+}
+.contact-form h2{
+    font-size: 30px;
+    color: var(--secondary);
+    font-weight: 500;
+}
+.contact-form .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contact-form .inputbox input,
+.contact-form .inputbox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid var(--primary);
+    resize: none;
+}
+.contact-form .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: .5s;
+    color: var(--secondary);
+}
+.contact-form .inputbox input:focus ~ span,
+.contact-form .inputbox input:valid ~ span,
+.contact-form .inputbox textarea:focus ~ span,
+.contact-form .inputbox textarea:valid ~ span{
+    color: var(--danger);
+    font-size: 14px;
+    transform: translateY(-20px);
+    font-weight: 800;
+
+
+}
+.contact-form .inputbox input[type="submit"]{
+    width: 200px;
+    background:var(--primary);
+    color: var(--secondary);
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+    .contact
+    {
+        padding: 50px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .contact-info
+    {
+        margin-bottom: 40px;
+    }
+    .container .contact-info,
+    .contact-form
+    {
+        width: 100%;
+    }
+}
+.section-heading{
+    font-family: 'Raleway-Bold';
+    text-align: center;
+    position: relative;
+    margin-bottom: 6rem;
+
+}
+.section-heading:after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+}
